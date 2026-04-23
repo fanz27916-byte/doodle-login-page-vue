@@ -1,6 +1,18 @@
-# Doodle Style Login Page - Vue 3
+# 🎨 Doodle Style Login Page - Vue 3
 
-A Vue 3 login page with doodle-style design, automatically generated from Figma design.
+A beautiful, responsive login page with doodle-style design, automatically generated from Figma design using automation.
+
+## ✨ Features
+
+- **Vue 3** with Composition API and TypeScript
+- **Doodle-style design system** with custom CSS variables
+- **Responsive layout** that works on all devices
+- **Reusable components** (DoodleButton, InputField)
+- **Vue Router** for navigation
+- **Pinia** for state management (ready to use)
+- **Vite** for fast development and building
+- **ESLint** with TypeScript support
+- **GitHub Actions** CI/CD pipeline
 
 ## 🚀 Quick Start
 
@@ -16,47 +28,97 @@ npm run build
 
 # Preview production build
 npm run preview
+
+# Lint and fix files
+npm run lint
 ```
 
 ## 📁 Project Structure
 
 ```
 src/
-├── App.vue              # Main application component
-├── main.ts             # Application entry point
-└── style.css           # Global styles and design tokens
+├── components/          # Reusable Vue components
+│   ├── DoodleButton.vue  # Custom button with doodle style
+│   └── InputField.vue    # Form input with validation
+├── views/               # Page components
+│   ├── LoginPage.vue    # Main login page
+│   └── AboutView.vue    # About page
+├── styles/              # CSS styles and design tokens
+│   ├── tokens.css       # Design tokens (colors, spacing, etc.)
+│   └── main.css        # Global styles and utilities
+├── router/              # Vue Router configuration
+│   └── index.ts
+├── App.vue              # Root component with navigation
+└── main.ts             # Application entry point
 ```
 
-## 🎨 Design Tokens
+## 🎨 Design System
 
-The design uses CSS custom properties for consistent styling:
-
+### Colors
 ```css
 :root {
-  --color-primary: #FF6B6B;     /* Doodle red */
-  --color-secondary: #4ECDC4;   /* Doodle teal */
-  --color-accent: #FFD166;      /* Doodle yellow */
-  --color-dark: #1A535C;        /* Doodle dark blue */
-  --color-light: #F7FFF7;       /* Doodle light */
-  
-  --font-doodle: 'Comic Neue', cursive;
-  --border-radius-doodle: 20px;
+  --color-doodle-primary: #FF6B6B;   /* Vibrant red */
+  --color-doodle-secondary: #4ECDC4; /* Teal */
+  --color-doodle-accent: #FFD166;    /* Yellow */
+  --color-doodle-dark: #1A535C;      /* Dark blue */
+  --color-doodle-light: #F7FFF7;     /* Off-white */
 }
 ```
 
-## 🔧 Features
+### Typography
+- **Font**: `Comic Neue` (handwritten style)
+- **Sizes**: Responsive font scaling
+- **Weights**: Bold for headings, regular for body
 
-- **Vue 3** with Composition API
-- **TypeScript** support
-- **Vite** for fast development
-- **Doodle-style** design system
-- **Responsive** layout
-- **GitHub Actions** CI/CD ready
+### Components
+- **DoodleButton**: Custom button with hover effects
+- **InputField**: Form input with icons and validation
+- **LoginPage**: Complete login form with social options
+- **AboutView**: Project information page
+
+## 🎯 Usage
+
+### Development
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm run dev`
+4. Open `http://localhost:5173`
+
+### Customization
+1. Update design tokens in `src/styles/tokens.css`
+2. Modify components in `src/components/`
+3. Add new pages in `src/views/`
+4. Update routing in `src/router/index.ts`
 
 ## 📦 Generated From
 
-This project was automatically generated using the Figma-to-GitHub automation skill.
+This project was automatically generated from a Figma design using the Figma-to-GitHub automation skill.
+
+## 🛠 Tech Stack
+
+- **Vue 3** - Progressive JavaScript framework
+- **TypeScript** - Type safety
+- **Vite** - Next generation frontend tooling
+- **Vue Router** - Client-side routing
+- **Pinia** - State management
+- **ESLint** - Code quality
+- **GitHub Actions** - CI/CD
 
 ## 📄 License
 
-MIT
+MIT License - see [LICENSE](LICENSE) for details.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📞 Support
+
+For issues and questions, please open an issue on GitHub.
+
+---
+
+Made with ❤️ using Figma-to-GitHub automation

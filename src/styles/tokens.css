@@ -1,0 +1,123 @@
+:root {
+  /* 涂鸦风格色彩 */
+  --color-doodle-primary: #FF6B6B;
+  --color-doodle-secondary: #4ECDC4;
+  --color-doodle-accent: #FFD166;
+  --color-doodle-dark: #1A535C;
+  --color-doodle-light: #F7FFF7;
+  --color-doodle-gray: #95A5A6;
+  --color-doodle-white: #FFFFFF;
+  
+  /* 字体 */
+  --font-doodle: 'Comic Neue', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-md: 1.25rem;    /* 20px */
+  --font-size-lg: 1.5rem;     /* 24px */
+  --font-size-xl: 2rem;       /* 32px */
+  --font-size-2xl: 2.5rem;    /* 40px */
+  
+  /* 间距 */
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 1rem;     /* 16px */
+  --spacing-md: 1.5rem;   /* 24px */
+  --spacing-lg: 2rem;     /* 32px */
+  --spacing-xl: 3rem;     /* 48px */
+  --spacing-2xl: 4rem;    /* 64px */
+  
+  /* 边框 */
+  --border-radius-doodle: 20px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-width-doodle: 3px;
+  --border-width-thin: 1px;
+  
+  /* 阴影 */
+  --shadow-doodle: 8px 8px 0px rgba(26, 83, 92, 0.2);
+  --shadow-doodle-hover: 12px 12px 0px rgba(26, 83, 92, 0.3);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  
+  /* 动画 */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+  
+  /* 层级 */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* 涂鸦风格工具类 */
+.doodle-border {
+  border: var(--border-width-doodle) solid var(--color-doodle-dark);
+  border-radius: var(--border-radius-doodle);
+}
+
+.doodle-shadow {
+  box-shadow: var(--shadow-doodle);
+  transition: box-shadow var(--transition-normal) ease;
+}
+
+.doodle-shadow:hover {
+  box-shadow: var(--shadow-doodle-hover);
+}
+
+.handwritten {
+  font-family: var(--font-doodle);
+  font-weight: 700;
+}
+
+/* 涂鸦风格动画 */
+@keyframes doodle-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+@keyframes doodle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes doodle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.doodle-animate-wiggle {
+  animation: doodle-wiggle 2s ease-in-out infinite;
+}
+
+.doodle-animate-bounce {
+  animation: doodle-bounce 1s ease-in-out infinite;
+}
+
+.doodle-animate-pulse {
+  animation: doodle-pulse 2s ease-in-out infinite;
+}
+
+/* 响应式断点 */
+@media (max-width: 640px) {
+  :root {
+    --font-size-xl: 1.75rem;
+    --font-size-2xl: 2rem;
+    --border-radius-doodle: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --border-radius-doodle: 12px;
+  }
+}

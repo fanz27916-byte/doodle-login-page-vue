@@ -16,6 +16,19 @@ A beautiful, responsive login page with doodle-style design, automatically gener
 
 ## 🚀 Quick Start
 
+### Option 1: Using setup script (Recommended)
+```bash
+# Make the script executable
+chmod +x setup.sh
+
+# Run the setup script
+./setup.sh
+
+# Start development server
+npm run dev
+```
+
+### Option 2: Manual setup
 ```bash
 # Install dependencies
 npm install
@@ -23,15 +36,22 @@ npm install
 # Start development server
 npm run dev
 
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Lint and fix files
-npm run lint
+# Open in browser: http://localhost:5173
 ```
+
+### Available Commands
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build
+npm run lint     # Lint and fix code
+```
+
+### Troubleshooting Import Errors
+If you see `Failed to resolve import "@/views/LoginPage.vue"`, make sure you have:
+1. Latest code: `git pull origin main`
+2. Correct vite.config.ts with path aliases
+3. Node.js 16+ installed
 
 ## 📁 Project Structure
 

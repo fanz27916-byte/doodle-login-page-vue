@@ -1,0 +1,33 @@
+:root {
+  --color-primary: #FF6B6B;
+  --color-secondary: #4ECDC4;
+  --color-accent: #FFD166;
+  --color-dark: #1A535C;
+  --color-light: #F7FFF7;
+  
+  --font-doodle: 'Comic Neue', cursive;
+  --border-radius-doodle: 20px;
+}
+
+#app {
+  font-family: var(--font-doodle);
+}
+
+.doodle-text {
+  font-family: var(--font-doodle);
+  font-weight: 700;
+}
+
+.doodle-border {
+  border: 3px solid var(--color-dark);
+  border-radius: var(--border-radius-doodle);
+}
+
+.doodle-shadow {
+  box-shadow: 8px 8px 0px rgba(26, 83, 92, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.doodle-shadow:hover {
+  box-shadow: 12px 12px 0px rgba(26, 83, 92, 0.3);
+}
